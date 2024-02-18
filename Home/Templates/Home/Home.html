@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"  type="text/css" href="{% static 'Home/main.css'%}">
+    <title>PennyWise</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <div class="logo-img"><img src="Images/wallet-3-line.svg" alt=""></div>
+            <a class="app-name" href="#">Pennywise</a>
+        </div>
+    </nav>
+
+    <div class="login-container">
+        <div class="welcome-text">Welcome back to Pennywise</div>
+        <div class="sub-text">Spendly is the best way to tracker your expenses and save money</div>
+        <form action="">
+            <div class="text-in">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email" name="email" required>
+            </div>
+
+            <div class="text-in">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" name="password" required>
+            </div>
+            <div class="login-button">
+                <input type="submit" value="Login">
+            </div>
+            <div class="signup"><a href="#signup"></a>Don't have an account? Sign up</a></div>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

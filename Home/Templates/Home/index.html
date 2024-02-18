@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "Home/main.css" %}">
+    <title>PennyWise</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <div class="logo-img"><img src="Images/wallet-3-line.svg" alt=""></div>
+            <a class="app-name" href="#">Pennywise</a>
+        </div>
+
+        <div class="nav-links">
+            <ul>
+                <li><a href="{% url 'Expense-Tracking' %}" class="nav-link">Dashboard</a></li>
+                <li><a href="{% url 'Budget'%}" class="nav-link">Budget</a></li>
+                <li><a href="{% url 'Transactions'%}" class="nav-link">Transactions</a></li>
+                <li><a href="{% url 'Report' %}" class="nav-link">Report</a></li>
+                <li><a href="" class="nav-link logout-button">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <h2>Dashboard</h2>
+        <section class="status">
+            <div class="status-container expense-status">Total spent <span>Rs.10,000</span></div>
+            <div class="status-container budget-status">
+                <div>Budget <span class="budget-categories">
+                        <div class="essentials">Essentials <span>Rs.10,000</span></div>
+                        <div class="lifestyle">Lifestyle <span>Rs.10,000</span></div>
+                        <div class="transportation">Transportation <span>Rs.10,000</span></div>
+                        <div class="savings">Savings <span>Rs.10,000</span></div>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section class="add-expense-form-container">
+            <h3>New Expense</h3>
+            <div class="add-expense-form">
+                <form action="#">
+                    <div class="text-input">
+                        <label for="expense-amount">Amount</label>
+                        <input type="text" placeholder="0.0" id="expense-amount" name="expense-amount" >
+                    </div>
+
+                    <div>
+                        <label for="expense-category">Category</label>
+                        <div class="select-container">
+                            <select name="category" id="expense-category" name="select-input expense-category">
+                                <option value="">
+                                    <div class="select-placeholder">Select a category</div>
+                                </option>
+                                <option value="essentials">Essentials</option>
+                                <option value="lifestyle">Lifestyle</option>
+                                <option value="transportation">Transportation</option>
+                                <option value="savings">Savings</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="date-input">
+                        <label for="expense-date">Date</label>
+                        <input type="date" id="expense-date" name="expense-date">
+                    </div>
+
+                    <div>
+                        <label for="payment-method">Payment method</label>
+                        <div class="select-container">
+                            <select name="method" id="payment-method" name=" select-input payment-method">
+                                <option value="">
+                                    <div class="select-placeholder">Select a payment method</div>
+                                </option>
+                                <option value="cash">Cash</option>
+                                <option value="online">Online</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="textarea-input">
+                        <label for="note">Note</label>
+                        <textarea name="expense-note" id="note" cols="30" rows="4"></textarea>
+                    </div>
+
+                    <div class="add-expense-button">
+                        <input type="submit" value="Add Expense">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

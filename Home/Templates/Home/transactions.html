@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "Home/main1.css" %}">
+    <title>PennyWise</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <div class="logo-img"><img src="Images/wallet-3-line.svg" alt=""></div>
+            <a class="app-name" href="#">Pennywise</a>
+        </div>
+
+        <div class="nav-links">
+            <ul>
+                <li><a href="{% url 'Expense-Tracking'%}" class="nav-link" style="color:rgb(158, 156, 170)">Dashboard</a></li>
+                <li><a href="{% url 'Budget'%}" class="nav-link">Budget</a></li>
+                <li><a href="{% url 'Transactions'%}" class="nav-link" style="color:white">Transactions</a></li>
+                <li><a href="{% url 'Report' %}" class="nav-link">Reports</a></li>
+                <li><a href="" class="nav-link logout-button">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="transactions">
+        <h2>Transactions</h2>
+        <div class="transactions-list">
+            <div class="transaction">
+                <div class="transaction-description">
+                    <div class="transaction-category">Essentials</div>
+                    <div class="transaction-note">Groceries - Bread, milk and bannana</div>
+                </div>
+
+                <div class="transaction-amt">- Rs.232</div>
+            </div>
+            <div class="transaction">
+                <div class="transaction-description">
+                    <div class="transaction-category">Lifestyle</div>
+                    <div class="transaction-note">Clothes</div>
+                </div>
+
+                <div class="transaction-amt">- Rs.1599</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
