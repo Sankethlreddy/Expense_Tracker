@@ -1,6 +1,45 @@
-<h2>You have been logged out</h2>
+<h2>You have been Successfully logged out</h2>
 <div class="border-top pt-3">
     <small class="text-muted">
         <a href="{% url 'login' %}">Log In Again</a>
     </small>
 </div>
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* This ensures the content is centered vertically on the entire viewport height */
+        margin: 0;
+    }
+    
+    .container {
+        text-align: center;
+    }
+    
+    h2 {
+        color: #4285f4;
+    }
+    
+    .border-top {
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+    
+    .text-muted {
+        color: #888;
+    }
+    
+    a {
+        color: #4285f4;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+</style>
