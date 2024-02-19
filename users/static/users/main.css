@@ -1,45 +1,82 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  form {
-    background-color: #fff;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #17161c;
+}
+
+/* Container styling */
+.content-section {
+    max-width: 400px;
+    margin: auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    background-color: #4caf50;
+    margin-top: 50px;
+    background-color: #efeff0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form fieldset styling */
+form fieldset {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Legend styling */
+form legend {
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #007bff;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid #007bff;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-outline-info {
+    background-color: transparent;
+    color: #007bff;
+}
+
+.btn-outline-info:hover {
+    background-color: #007bff;
     color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
+}
+
+/* Link styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .content-section {
+        max-width: 100%;
+    }
+}

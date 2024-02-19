@@ -1,7 +1,14 @@
-from django.shortcuts import render,redirect
+   
+from django.shortcuts import render, redirect
 from django.contrib import messages
-from users.forms import UserRegisterForm
-
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import AuthenticationForm
+from .forms import UserRegisterForm
+from django.core.mail import send_mail
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import get_template
+from django.template import Context
 
 
 def register(request):
