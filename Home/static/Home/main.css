@@ -1,502 +1,119 @@
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, ul, li, form {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
 }
 
 body {
-    line-height: 1;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-body {
-    font-family: "Montserrat", sans-serif;
-    background-color: rgb(23, 22, 28);
-}
-
-/* index.html styles */
+/* Navigation Styles */
 nav {
-    height: 8vh;
+    background-color: #333;
+    color: white;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgb(47, 47, 60);
+    padding: 1rem;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    margin-left: 25px;
-    font-size: 25px;
-    font-weight: 700;
 }
 
-.logo-img {
-    width: 30px;
-    margin-right: 4px;
+.logo-img img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.app-name {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .nav-links ul {
+    list-style-type: none;
     display: flex;
 }
 
-.nav-links ul li {
-    font-size: 17px;
-    font-weight: 300;
-    padding: 20px 25px;
-    transition: 100ms color ease-out;
-
-}
-
-.nav-links ul li a {
-    color: rgb(158, 156, 170);
-}
-
-
-.nav-links ul li:first-of-type a {
+.nav-link {
+    text-decoration: none;
     color: white;
-}
-
-.nav-links ul li a:hover {
-    color: white;
+    margin: 0 15px;
 }
 
 .logout-button {
-    border: 1px solid rgb(47, 47, 60);
-    padding: 7px 20px;
-    border-radius: 10px;
-    transition: 100ms background-color ease-out, 100ms color ease-out;
+    background-color: #c0392b; /* Red color for logout button */
+    padding: 8px 15px;
+    border-radius: 5px;
 }
 
-.logout-button:hover {
-    background-color: rgb(47, 47, 60);
-}
-
-main {
-    height: 100vh;
-    width: 80%;
-    margin: 2% 0 0 10%;
-    color: white;
+/* Main Content Styles */
+.dashboard {
+    padding: 20px;
 }
 
 h2 {
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.status {
-    padding: 40px 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.status-container {
-    width: 200px;
-    height: 100px;
-    padding: 20px;
-    color: white;
-    font-size: 20px;
-    font-weight: 300;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1.5px solid rgb(47, 47, 60);
-    border-radius: 10px
-}
-
-.status-container span {
-    color: white;
-    font-size: 25px;
-    font-weight: 500;
-    padding: 10px 0;
-}
-
-.budget-status {
-    width: 800px;
-    display: flex;
-}
-
-.budget-status>div {
-    margin-top: 18px;
-}
-
-.budget-status span {
-    font-size: 20px;
-    font-weight: 200;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
-
-.budget-status span span {
-    font-size: 25px;
-    font-weight: 500;
-    padding: 10px 0;
-    color: white;
-}
-
-.add-expense-form-container {
-    width: 50%;
-    margin: 20px auto;
-}
-
-.add-expense-form-container h3 {
-    font-size: 25px;
-    font-weight: 500;
-    padding: 0 0 20px 0;
-}
-
-.add-expense-form {
-    border: 1px solid rgb(47, 47, 60);
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.add-expense-form-container div {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-}
-
-.add-expense-form-container label {
-    font-size: 20px;
-    font-weight: 400;
-    padding-bottom: 5px;
-}
-
-.text-input input {
-    border: 1.5px solid rgb(47, 47, 60);
-    background-color: rgb(35, 33, 42);
-    color: white;
-    height: 50px;
-    padding-left: 20px;
-    outline: none;
-    font-size: 18px;
-    border-radius: 10px;
-    font-family: "Montserrat", sans-serif;
-}
-
-select {
-    background-color: rgb(35, 33, 42);
-    height: 50px;
-    color: white;
-    padding-left: 20px;
-    outline: none;
-    font-size: 18px;
-    border-radius: 10px;
-    border: 1.5px solid rgb(47, 47, 60);
-    font-family: "Montserrat", sans-serif;
-}
-
-.select-placeholder {
-    color: rgb(47, 47, 60);
-}
-
-.date-input input {
-    background-color: rgb(35, 33, 42);
-    height: 50px;
-    color: white;
-    height: 50px;
-    padding-left: 20px;
-    outline: none;
-    font-size: 18px;
-    border-radius: 10px;
-    border: 1.5px solid rgb(47, 47, 60);
-    font-family: "Montserrat", sans-serif;
-}
-
-textarea {
-    background-color: rgb(35, 33, 42);
-    border: 1.5px solid rgb(47, 47, 60);
-    border-radius: 10px;
-    color: white;
-    padding: 20px;
-    font-size: 18px;
-    outline: none;
-    resize: none;
-    font-family: "Montserrat", sans-serif;
-}
-
-.add-expense-button input {
-    font-family: "Montserrat", sans-serif;
-    width: 525px;
-    height: 40px;
-    background-color: rgb(90, 87, 163);
-    border: none;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 500;
-    color: white;
-    margin: 20px 0 0 0;
-    transition: 100ms background-color ease-out;
-}
-
-.add-expense-button input:hover {
-    background-color: rgb(73, 70, 143);
-}
-
-
-
-/* Login page styles */
-.login-container {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    width: 500px;
-}
-
-.welcome-text {
-    font-size: 34px;
-    font-weight: 500;
-    padding-bottom: 20px;
-}
-
-.sub-text {
-    font-size: 18px;
-    font-weight: 300;
-    padding-bottom: 20px;
-    line-height: 1.4em;
-}
-
-.text-in {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 90px;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
-.text-in label {
-    font-size: 18px;
-    font-weight: 400;
+/* Status Section Styles */
+.status-container {
+    margin-bottom: 15px;
 }
 
-.text-in input {
-    border: 1.5px solid rgb(47, 47, 60);
-    background-color: rgb(35, 33, 42);
-    color: white;
-    width: 100%;
-    height: 50px;
-    padding-left: 20px;
-    outline: none;
-    font-size: 18px;
-    border-radius: 10px;
+.expense-status span,
+.budget-status span {
+    font-weight: bold;
+    margin-left: 10px;
 }
 
-.login-button input {
-    width: 525px;
-    height: 40px;
-    background-color: rgb(90, 87, 163);
-    border: none;
-    border-radius: 10px;
-    font-size: 15px;
-    color: white;
-    margin: 20px 0;
-    transition: 100ms background-color ease-out;
-    font-family: "Montserrat", sans-serif;
-}
-
-.login-button input:hover {
-    background-color: rgb(73, 70, 143);
-}
-
-.signup {
-    text-align: center;
-    color: rgb(158, 156, 170);
-    text-decoration: none;
-    font-weight: 300;
-}
-
-.signup:hover {
-    text-decoration: underline;
-    transition: 100ms text-decoration ease-out;
-}
-
-/* Budget page styles */
-.set-budget-form-container {
-    width: 50%;
-    margin: 20px auto;
-}
-
-.set-budget-form-container h2 {
-    font-size: 30px;
-    font-weight: 700;
-    padding: 0 0 20px 0;
-}
-
-.set-budget-form {
+.budget-categories {
     display: flex;
     flex-direction: column;
 }
 
-.set-budget {
+/* Add Expense Form Styles */
+.add-expense-form-container {
+    margin-top: 30px;
+}
+
+.add-expense-form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form {
     display: flex;
     flex-direction: column;
-    padding: 20px 0;
 }
 
-.set-budget label {
-    font-size: 20px;
-    font-weight: 500;
-    padding-bottom: 10px;
-}
-
-.set-budget input {
-    border: 1.5px solid rgb(47, 47, 60);
-    background-color: rgb(35, 33, 42);
+button {
+    background-color: #3498db;
     color: white;
-    height: 50px;
-    padding-left: 20px;
-    outline: none;
-    font-size: 18px;
-    border-radius: 10px;
-}
-
-.set-budget-button input {
-    width: 100%;
-    height: 50px;
-    background-color: rgb(90, 87, 163);
+    padding: 10px 15px;
     border: none;
-    border-radius: 10px;
-    font-size: 17px;
-    font-weight: 500;
-    color: white;
-    margin: 20px 0 0 0;
-    transition: 100ms background-color ease-out;
-    font-family: "Montserrat", sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-.set-budget-button input:hover {
-    background-color: rgb(73, 70, 143);
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
 }
