@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    {% comment %} <link rel="stylesheet" type="text/css" href="{% static "Home/main.css"%}"> {% endcomment %}
+    <link rel="stylesheet" type="text/css" href="{% static "Home/main.css"%}">
     <title>PennyWise</title>
 </head>
 
@@ -26,7 +26,7 @@
                 <li><a href="{% url 'Budget'%}" class="nav-link">Budget</a></li>
                 <li><a href="{% url 'Transactions'%}" class="nav-link">Transactions</a></li>
                 <li><a href="{% url 'Report' %}" class="nav-link">Report</a></li>
-                <li><a href="{% url 'logout' %}" class="nav-link logout-button">Logout</a></li>
+                <li><a href="" class="nav-link logout-button">Logout</a></li>
             </ul>
         </div>
     </nav>
@@ -38,22 +38,22 @@
                 <div class="set-budget-form">
                     <div class="set-budget">
                         <label for="set-essentials">Essentials</label>
-                        <input type="text" id="set-essentials" name="essentials-budget">
+                        <input type="number" min = '0' d="set-essentials" name="essentials-budget">
                     </div>
 
                     <div class="set-budget">
                         <label for="set-lifestyle">Lifestyle</label>
-                        <input type="text" id="set-lifestyle" name="lifestyle-budget">
+                        <input type="number" min ='0' id="set-lifestyle" name="lifestyle-budget">
                     </div>
 
                     <div class="set-budget">
                         <label for="set-transportation">Transportation</label>
-                        <input type="text" id="set-transportation" name="transportation-budget">
+                        <input type="number" min = '0' id="set-transportation" name="transportation-budget">
                     </div>
 
                     <div class="set-budget">
                         <label for="set-savings">Savings</label>
-                        <input type="text" id="set-savings" name="savings-budget">
+                        <input type="number" min='0' id="set-savings" name="savings-budget">
                     </div>
 
                     <div class="set-budget-button">
