@@ -49,7 +49,7 @@
         <section class="add-expense-form-container">
             <h3>New Expense</h3>
             <div class="add-expense-form">
-                <form action="#">
+                <form action="" method ='POST'>{% csrf_token %}
                     <div class="text-input">
                         <label for="expense-amount">Amount</label>
                         <input type="number" min ='0' placeholder="0.0" id="expense-amount" name="expense-amount" >
