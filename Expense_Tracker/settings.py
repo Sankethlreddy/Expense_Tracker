@@ -76,22 +76,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Expense_Tracker.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME' :'Expense_Tracker',
-#         'USER' :'root',
-#         'PASSWORD':'asdf1234',
-#         'HOST':'127.0.0.1',
-#         'PORT':'3306',
-#          'OPTIONS': {  
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
-#         }  
-#     }
-# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',

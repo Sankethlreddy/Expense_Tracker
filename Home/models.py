@@ -35,7 +35,7 @@ class Category(models.Model):
 class Budget(models.Model):
     budget_id = models.AutoField(primary_key=True)
     monthly_limit = models.IntegerField(null=True)
-    category_name = models.CharField(max_length=10, null=True)
+    category_name = models.CharField(max_length=100, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     def _str_(self):
         return f"Expense {self.budget_id} by {self.user.username}"

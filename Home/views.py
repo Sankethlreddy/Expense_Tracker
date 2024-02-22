@@ -25,8 +25,26 @@ def Expense_Tracking(request):
 
 
 def Budget(request):
-    return render(request,'Home/Budget.html')
-
+    if request.method == "POST":
+        user_instance = request.user
+        essentials_budget = request.POST.get('essentials-budget', '')
+        if essentials_budget != '':
+            user_budget = models.Budget(user=user_instance, monthly_limit=essentials_budget, category_name='Essentials')
+            user_budget.save()
+        lifeStyle_budget = request.POST.get('lifestyle-budget', '')
+        if lifeStyle_budget != '':
+            user_budget = models.Budget(user=user_instance, monthly_limit=lifeStyle_budget, category_name='Lifestyle')
+            user_budget.save()
+        Transportation_budget = request.POST.get('transportation-budget', '')
+        if Transportation_budget != '':
+            user_budget = models.Budget(user=user_instance, monthly_limit=Transportation_budget, category_name='Transportation')
+            user_budget.save()
+        savings_budget= request.POST.get('savings-budget', '')
+        if savings_budget != '':
+            user_budget = models.Budget(user=user_instance, monthly_limit=savings_budget, category_name='Savings')
+            user_budget.save()
+        return HttpResponse('Data Successfully Stored')
+    return render(request, 'Home/Budget.html')
 def Report(request):
     return render(request,'Home/report.html')
 
