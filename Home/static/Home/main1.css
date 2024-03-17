@@ -627,7 +627,7 @@ textarea {
 }
 
 .spending-by-category-graph .essentials-bar>div {
-    width: 80%;
+    width: 100%;
 }
 
 .spending-by-category-graph .lifestyle-bar>div {

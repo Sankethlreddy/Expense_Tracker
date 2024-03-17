@@ -34,22 +34,16 @@
     <main class="transactions">
         <h2>Transactions</h2>
         <div class="transactions-list">
+            {% for obj in essential_objs %}
             <div class="transaction">
                 <div class="transaction-description">
-                    <div class="transaction-category">Essentials</div>
-                    <div class="transaction-note">Groceries - Bread, milk and bannana</div>
+                    <div class="transaction-category">{{obj.category_name}}</div>
+                    <div class="transaction-note">{{obj.description}}</div>
                 </div>
 
-                <div class="transaction-amt">- Rs.232</div>
+                <div class="transaction-amt">-{{obj.amount}}</div>
             </div>
-            <div class="transaction">
-                <div class="transaction-description">
-                    <div class="transaction-category">Lifestyle</div>
-                    <div class="transaction-note">Clothes</div>
-                </div>
-
-                <div class="transaction-amt">- Rs.1599</div>
-            </div>
+            {% endfor %}
         </div>
     </main>
 

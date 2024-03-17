@@ -7,7 +7,7 @@ from django.contrib.auth.forms import UserCreationForm
 class Expenses(models.Model):
     expense_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    category_name = models.CharField(max_length=10)
+    category_name = models.CharField(max_length=20)
     amount = models.DecimalField(max_digits=10, decimal_places=2, null=False)
     description = models.CharField(max_length=255, null=True)
     expense_date = models.DateField(null=True)
@@ -35,10 +35,21 @@ class Category(models.Model):
 class Budget(models.Model):
     budget_id = models.AutoField(primary_key=True)
     monthly_limit = models.IntegerField(null=True)
+    #amount = models.ForeignKey(Expenses, on_delete=models.CASCADE, null=True)
     category_name = models.CharField(max_length=100, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     def _str_(self):
         return f"Expense {self.budget_id} by {self.user.username}"
+    
+
+
+class rem:
+    ess : int
+    life : int
+    tran : int
+    save : int
+
+
 
 
 
